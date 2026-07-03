@@ -1,14 +1,13 @@
 package com.theendercore.grinding_your_gears.config
 
+import com.theendercore.grinding_your_gears.GrindingYourGears.MODID
+import com.theendercore.grinding_your_gears.GrindingYourGears.id
 import me.fzzyhmstrs.fzzy_config.annotations.NonSync
 import me.fzzyhmstrs.fzzy_config.config.Config
 import me.fzzyhmstrs.fzzy_config.config.ConfigGroup
 import me.fzzyhmstrs.fzzy_config.validation.number.ValidatedInt
 import me.fzzyhmstrs.fzzy_config.validation.number.ValidatedNumber.WidgetType.TEXTBOX_WITH_BUTTONS
-import com.theendercore.grinding_your_gears.GrindingYourGears.MODID
-import com.theendercore.grinding_your_gears.GrindingYourGears.id
 
-@Suppress("unused")
 class GYGConfig : Config(id(MODID)) {
 
     var groupName = ConfigGroup("group_id", false)

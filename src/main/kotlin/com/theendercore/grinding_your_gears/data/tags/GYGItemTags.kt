@@ -6,7 +6,8 @@ import com.theendercore.grinding_your_gears.util.tag
 
 object GYGItemTags {
 
-    val APPLE_LIKE = create("apple_like")
+    val CRUSHABLE = create("crushable")
+    val NOT_CRUSHABLE = create("not_crushable")
 
     fun create(id: String) = Registries.ITEM.tag(id(id))
 

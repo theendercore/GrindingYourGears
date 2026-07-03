@@ -32,8 +32,7 @@
     "minecraft": "${version_range}",
     "fabricloader": "*",
     "fabric-api": "*",
-    "fabric-language-kotlin": ">=${fabric_kotlin}",
-    "fzzy_config": ">=${fzzy_config}"
+    "fabric-language-kotlin": ">=${fabric_kotlin}"
   },
   "contact": {
     "homepage": "https://github.com/${github_repo}",
