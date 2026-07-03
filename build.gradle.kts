@@ -47,8 +47,8 @@ dependencies {
     // Compatibility
     // Runtime
     modImplementation(libs.modmenu)
-    modCompileOnly(variantOf(libs.emi) { classifier("api") })
-    modLocalRuntime(libs.emi)
+//    modCompileOnly(variantOf(libs.emi) { classifier("api") })
+//    modLocalRuntime(libs.emi)
     // Testing
     modImplementation(libs.bundles.cw)
 }

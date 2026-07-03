@@ -9,24 +9,24 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "org.teamvoided.template.Template::init"
+        "value": "com.theendercore.grinding_your_gears.GrindingYourGears::init"
       }
     ],
     "client": [
       {
         "adapter": "kotlin",
-        "value": "org.teamvoided.template.client.TemplateClient::init"
+        "value": "com.theendercore.grinding_your_gears.client.GrindingYourGearsClient::init"
       }
     ]
   },
   "mixins": [
-    "template.mixins.json",
+    "grinding_your_gears.mixins.json",
     {
-      "config": "template.client.mixins.json",
+      "config": "grinding_your_gears.client.mixins.json",
       "environment": "client"
     }
   ],
-  "accessWidener": "template.classtweaker",
+  "accessWidener": "grinding_your_gears.classtweaker",
   "depends": {
     "java": ">=${java}",
     "minecraft": "${version_range}",
@@ -42,5 +42,5 @@
     "discord": "${discord_invite}"
   },
   "license": "${license}",
-  "icon": "assets/template/icon.png"
+  "icon": "assets/grinding_your_gears/icon.png"
 }

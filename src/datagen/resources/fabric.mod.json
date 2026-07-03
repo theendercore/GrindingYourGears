@@ -7,9 +7,11 @@
     "fabric-datagen": [
       {
         "adapter": "kotlin",
-        "value": "org.teamvoided.template.datagen.TemplateData"
+        "value": "com.theendercore.grinding_your_gears.datagen.GrindingYourGearsData"
       }
     ]
   },
-  "mixins": [ "template.datagen.mixins.json" ]
+  "mixins": [
+    "grinding_your_gears.datagen.mixins.json"
+  ]
 }

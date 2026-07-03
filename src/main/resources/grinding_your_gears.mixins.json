@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.theendercore.grinding_your_gears.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ExampleServerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
