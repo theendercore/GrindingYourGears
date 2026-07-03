@@ -18,6 +18,7 @@ class ItemTagsProvider(o: FabricDataOutput, p: CompletableFuture<HolderLookup.Pr
             .forceAddTag(ConventionalItemTags.ENCHANTABLES)
             .forceAddTag(ConventionalItemTags.TOOLS)
             .forceAddTag(ConventionalItemTags.ARMORS)
+            .forceAddTag(ItemTags.TRIMMABLE_ARMOR)
 
         valueLookupBuilder(GYGItemTags.NOT_CRUSHABLE)
             .forceAddTag(ConventionalItemTags.NAUTILUS_ARMORS)

@@ -3,12 +3,15 @@ package com.theendercore.grinding_your_gears.util
 import com.theendercore.grinding_your_gears.GrindingYourGears.id
 import com.theendercore.grinding_your_gears.mixin.ShapedRecipeAccessor
 import dev.amymialee.grindering.recipes.GrindingRecipe
+import net.fabricmc.loader.api.FabricLoader
 import net.minecraft.core.NonNullList
 import net.minecraft.core.registries.Registries
+import net.minecraft.resources.ResourceKey
 import net.minecraft.server.level.ServerLevel
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.ItemStack
 import net.minecraft.world.item.crafting.Ingredient
+import net.minecraft.world.item.crafting.Recipe
 import net.minecraft.world.item.crafting.RecipeHolder
 import net.minecraft.world.item.crafting.RecipeType
 import java.util.*
@@ -32,6 +35,9 @@ fun recipeFromItem(input: ItemStack, level: ServerLevel): Optional<RecipeHolder<
     for (holder in level.recipeAccess().getAllOfType(RecipeType.CRAFTING)) {
         val shaped = holder.value
         if (shaped is ShapedRecipeAccessor && input.`is`(shaped.gyg_result().item)) {
+
+            if (doNoveltyCheck(holder.id)) continue
+
             val opt = Optional.ofNullable(crateGrindingRecipe(shaped)).map {
                 RecipeHolder(
                     Registries.RECIPE.key(
@@ -51,6 +57,9 @@ fun recipeFromItem(input: ItemStack, level: ServerLevel): Optional<RecipeHolder<
     return Optional.empty()
 }
 
+fun doNoveltyCheck(id: ResourceKey<Recipe<*>>): Boolean {
+    return FabricLoader.getInstance().isModLoaded("hydrothermia") && id.identifier().path.contains("diamond")
+}
 
 fun crateGrindingRecipe(recipe: ShapedRecipeAccessor): GrindingRecipe? {
     val input = Ingredient.of(recipe.gyg_result().item)
