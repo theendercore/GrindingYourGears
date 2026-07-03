@@ -4,7 +4,10 @@
   "package": "com.theendercore.grinding_your_gears.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ExampleServerMixin"
+    "ExampleServerMixin",
+    "IngredientAccessor",
+    "ShapedRecipeAccessor",
+    "ShapedRecipePatternAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
